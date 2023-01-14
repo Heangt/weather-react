@@ -1,7 +1,6 @@
 import Weather from './Weather';
-import './App.css';
-
-function App() {
+import './App.css'
+export default function App() {
   return <div className='App'>
     <Weather/>
     <span>
@@ -12,4 +11,4 @@ function App() {
  </div>
 }
 
-export default App;
+

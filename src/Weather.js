@@ -1,5 +1,5 @@
-
 import React from "react";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
 export default function Weather(){
@@ -13,18 +13,6 @@ export default function Weather(){
     />
   </form>
   <hr/>
-  <div className="header">
-  <h1>Spain</h1>
-  <small > Saturday 11:00 </small>
-  <strong>25</strong>
-  <span class="units">
-    <a href="/" >ºC</a>
-    | <a href="/">ºF</a>
-  </span>
-  <small class="climate">Sunny</small>
-
-  <p class="condition">Precipitation Humidity Wind</p>
-  <p class="degree">1% 60% 16km/h</p>
-  </div>
+  <WeatherInfo/>
   </div>
 }
