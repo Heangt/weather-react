@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
+
 import "./Weather.css";
 
 
 export default function Weather(props){
   const [city, setcity] = useState(props.city);
   const [weatherData, setWeatherData]= useState({ready:false});
+  
   function showWeatherData(response){
     console.log(response.data)
     setWeatherData({
@@ -15,8 +17,9 @@ export default function Weather(props){
      temp: response.data.main.temp,
      description: response.data.weather[0].description,
      humidity:response.data.main.humidity,
-     wind:response.data.wind.speed
-  })
+     wind:response.data.wind.speed,
+     
+    })
 }
 function searchWeatherData() {
   let  apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
@@ -39,7 +42,7 @@ function searchWeatherData() {
     <input onChange={updateCity}
       id="input-city"
       type="search"
-      class="form-control styleform"
+      class="form-control styleform " 
       placeholder="   Enter location  "
     />
   </form>
