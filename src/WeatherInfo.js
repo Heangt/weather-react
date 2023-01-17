@@ -1,10 +1,12 @@
 
 import React from "react";
+import FormattedDate from "./FormattedDate";
+
 export default function WeatherInfo(props){
 
 return <div className="header">
   <h1>{props.data.city}</h1>
-  <small > Saturday 11:00 </small>
+  <FormattedDate dateData={props.data.date}/>
   <strong>{Math.round(props.data.temp)}</strong>
   <span class="units">
     <a href="/" >ºC</a>
