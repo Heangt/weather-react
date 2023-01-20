@@ -14,12 +14,7 @@ small {
     display: block;
     font-size: 13px;
 }
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
+
 small.climate {
     display: block;
     margin: -25px 0 0 50px;
@@ -31,11 +26,6 @@ p.condition {
     padding-left: 10px;
     margin-left: 15px;
 }
-span.units {
-    position: absolute;
-    margin-left: 2px;
-}
-
 p.degree {
     word-spacing: 30px;
     margin-left: 60px;
@@ -49,7 +39,10 @@ input.styleform {
     text-indent: 15px;
 
 }
-
+span.units {
+    position: absolute;
+    margin-left: 2px;
+}
     
 
 .form-control {
