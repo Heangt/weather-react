@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
-
 import "./Weather.css";
-
 
 export default function Weather(props){
   const [city, setcity] = useState(props.city);
   const [weatherData, setWeatherData]= useState({ready:false});
   
   function showWeatherData(response){
-    
     setWeatherData({
      ready:true,
      city: response.data.name,
@@ -18,8 +15,9 @@ export default function Weather(props){
      description: response.data.weather[0].description,
      humidity:response.data.main.humidity,
      wind:response.data.wind.speed,
-     date:response.data.dt
-    })
+     date:response.data.dt,
+     icon:response.data.weather[0].icon
+     })
 }
 function searchWeatherData() {
   let  apiKey = "57821c3b75b60c68ecd1a8d0dd1aa8d3";
