@@ -13,7 +13,7 @@ export default function ConversionTemp(props){
     }
     if (unit==="celsius") {
     return (
-    <div  className="ConversionTemp">
+    <div className="ConversionTemp">
       <strong>{props.celsius}</strong>
       <span className="units">
      <a href="/" class="text-decoration-none"onClick={convertCelsius}>ºC</a>

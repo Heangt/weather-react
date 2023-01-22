@@ -8,5 +8,5 @@ export default function FormattedDate(props){
     if(hour<10) hour=`0${hour}`;
     if(minute<10) minute=`0${minute}`;
     
-    return <small>{day} {hour}:{minute}</small>
+    return <p>{day} {hour}:{minute}</p>
 }
