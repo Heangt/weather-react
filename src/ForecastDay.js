@@ -17,12 +17,12 @@ export default function ForecastDay(props){
       return min
     }
       
-         return <div>
-          <div class="px-2 my-2" >{showDay(props.data.dt)}</div>
+         return <div className="ForecastDay" class="ps-3">
+          <div class="ps-2 my-2" >{showDay(props.data.dt)}</div>
           <WeatherIcon code={props.data.weather[0].icon} size={40}/> 
           <div className="forecastTemp">
-          <span className="max">{maxTemp()}º</span>
-          <span className="min">{minTemp()}º</span>
+          <span className="max" class="ps-1">{maxTemp()}º</span> 
+          <span className="min" class="ps-1 opacity-50">{minTemp()}º</span>
           </div>
-          </div>     
+          </div>   
 }

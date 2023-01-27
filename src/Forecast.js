@@ -1,23 +1,26 @@
 import React, { useState } from "react";
 import ForecastDay from "./ForecastDay";
 import axios from "axios";
+
 export default function Forecast(props){
-  
-  const [dataForecast, setdataForecast] =useState({loaded:false});
+  const [loaded,setLoaded]=useState(false);
+  const [dataForecast, setdataForecast] =useState();
   function displayForecast(response){
-   setdataForecast({
-    loaded:true,
-    daily:response.data.daily
-   });
-}  
- if (dataForecast.loaded){
+   setLoaded(true);
+  setdataForecast(response.data.daily);
+  }  
+ if (loaded){
   return <div className="Forcast">
           <div class="container">
           <div class="row">
-          <div class="col">
-           <ForecastDay data={dataForecast.daily[0]}/> 
-          </div>
-          </div> 
+          {dataForecast.map((dailyForecast,index) =>{
+            if(index <6){
+          return <div class="col" key={index}>
+           <ForecastDay data={dailyForecast}/> 
+           </div>
+           } else return null
+            })}
+            </div> 
           </div> 
           </div> 
           }
