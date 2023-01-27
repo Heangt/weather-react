@@ -4,6 +4,7 @@ import FormattedDate from "./FormattedDate";
 import ConversionTemp from "./ConversionTemp";
 import "./WeatherInfo.css";
 import WeatherIcon from "./WeatherIcon";
+
 export default function WeatherInfo(props){
 let temperature = Math.round(props.data.temp);
 return <div className="WeatherInfo">
@@ -15,7 +16,7 @@ return <div className="WeatherInfo">
 <p class="condition">Humidity: {props.data.humidity}% Wind:{""} {Math.round(props.data.wind)}km/h</p>
  </div>
 <div class="col-1">
-<WeatherIcon code={props.data.icon}/>
+<WeatherIcon code={props.data.icon} size={55}/>
  </div>
 <div class="col-3">
 <ConversionTemp celsius={temperature}/>
@@ -24,10 +25,7 @@ return <div className="WeatherInfo">
  </div>
  </div>
    </div>
-
-
-
- }
+}
     
   
    
