@@ -1,10 +1,13 @@
 .Weather {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
+    color: #603F8B;
     text-align: left;
     padding: 5px 10px;
-    border: 2px solid #8eb757;
-    border-radius: 10px;
+    border: 20px solid #fff;
+    border-radius: 20px;
+    
+    background-color: #fff;
 }
 .Weather input.styleform {
     box-shadow: none;

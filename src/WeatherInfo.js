@@ -13,7 +13,7 @@ return <div className="WeatherInfo">
  <div class="col-8">
  <h1>{props.data.city}</h1>
  <FormattedDate dateData={props.data.date}/>
-<p class="condition">Humidity: {props.data.humidity}% Wind:{""} {Math.round(props.data.wind)}km/h</p>
+<p class="condition">Humidity: <span className="degree">{props.data.humidity}%</span> Wind:{""} <span className="degree">{Math.round(props.data.wind)}km/h</span></p>
  </div>
 <div class="col-1">
 <WeatherIcon code={props.data.icon} size={55}/>

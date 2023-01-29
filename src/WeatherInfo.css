@@ -12,12 +12,17 @@
 }
 .WeatherInfo p.climate {
     font-size: 20px;
+    color: #D43790;
     margin-top: -55px;
     margin-left: -65px;
 }
 .WeatherInfo p.condition {
     word-spacing: 5px;
     margin-top: -15px;
+    
+}
+.WeatherInfo span.degree{
+    color: #D43790;
 }
 .WeatherInfo span.units {
     position: absolute;
